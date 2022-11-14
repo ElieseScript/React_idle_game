@@ -22,9 +22,18 @@ div .countDisplay{
 }
 
 div .mainButton{
+  font-family:'Anonymous Pro',monospace;
   border-radius: 3em;
 	width: 30em;
   height: 5em;
+  margin-bottom: 20%;
+
+}
+div #statTog{
+  display: inline-block;
+  border-radius: 3em;
+	width: 10em;
+  height: 3em;
   margin-bottom: 20%;
 
 }
