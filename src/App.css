@@ -21,22 +21,28 @@ div .countDisplay{
   
 }
 
-div .mainButton{
+.mainButton{
   font-family:'Anonymous Pro',monospace;
   border-radius: 3em;
-	width: 30em;
+  width: 30em;
   height: 5em;
-  margin-bottom: 20%;
-
+  margin-bottom: 5%;
+  
 }
 div #statTog{
-  display: inline-block;
-  border-radius: 3em;
-	width: 10em;
-  height: 3em;
-  margin-bottom: 20%;
-
+  display: inline-flex;
+  width: 10em;
+  
+  justify-content: center;
 }
+div #statTogButton{
+	font-family:'Anonymous Pro',monospace;
+	border-radius: 3em;
+	width: 10em;
+	height: 3em;
+	margin-bottom: 0;
+  
+  }
 
 
 .upgradesMenu{
