@@ -35,6 +35,12 @@ function App() {
   const numSimp = (number) =>{
     return number.toLocaleString()
 }
+  const ValueData = {
+    baseVals: [20,250,1000,5000,15000,50000,150000,300000,1000000,3500000,25000000,200000000,1000000000,10000000000,50000000000,350000000000,1000000000000,50000000000000,350000000000000,1000000000000000,25000000000000000,350000000000000000,1000000000000000000],
+    additionals:[1,3,5,10,25,100,450,1000,5000,15000,50000,300000,650000,2500000,10000000,35000000,65000000,100000000,350000000,650000000,1000000000,5000000000,10000000000]
+
+  }
+  
 const abbreviateNumber=(value, bool)=> {
   
   if(bool === true && value>100){
@@ -66,164 +72,164 @@ const abbreviateNumber=(value, bool)=> {
     
     switch(e.target.value){
       case 'upgrade1': 
-      if(click >= upgCalc(20,upg1)){
+      if(click >= upgCalc(ValueData.baseVals[0],upg1)){
         setUpg1((upg1)=>upg1+1)
-        setValue((value)=>value+1)
-        setClick((click)=>click-(upgCalc(20,upg1)))
+        setValue((value)=>value+ValueData.additionals[0])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[0],upg1)))
       }
       break;
       case 'upgrade2': 
-      if(click >= upgCalc(250,upg2)){
+      if(click >= upgCalc(ValueData.baseVals[1],upg2)){
         setUpg2((upg2)=>upg2+1)
-        setValue((value)=>value+3)
-        setClick((click)=>click-(upgCalc(250,upg2)))
+        setValue((value)=>value+ValueData.additionals[1])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[1],upg2)))
       }
       break;
       case 'upgrade3': 
-      if(click >= upgCalc(1000,upg3)){
+      if(click >= upgCalc(ValueData.baseVals[2],upg3)){
         setUpg3((upg3)=>upg3+1)
-        setValue((value)=>value+5)
-        setClick((click)=>click-(upgCalc(1000,upg3)))
+        setValue((value)=>value+ValueData.additionals[2])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[2],upg3)))
       }
       break;
       case 'upgrade4': 
-      if(click >= upgCalc(5000,upg4)){
+      if(click >= upgCalc(ValueData.baseVals[3],upg4)){
         setUpg4((upg4)=>upg4+1)
-        setValue((value)=>value+10)
-        setClick((click)=>click-(upgCalc(5000,upg4)))
+        setValue((value)=>value+ValueData.additionals[3])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[3],upg4)))
       }
       break;
       case 'upgrade5': 
-      if(click >= upgCalc(15000,upg5)){
+      if(click >= upgCalc(ValueData.baseVals[4],upg5)){
         setUpg5((upg5)=>upg5+1)
-        setValue((value)=>value+25)
-        setClick((click)=>click-(upgCalc(15000,upg5)))
+        setValue((value)=>value+ValueData.additionals[4])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[4],upg5)))
       }
       break;
       case 'upgrade6': 
-      if(click >= upgCalc(50000,upg6)){
+      if(click >= upgCalc(ValueData.baseVals[5],upg6)){
         setUpg6((upg6)=>upg6+1)
-        setValue((value)=>value+100)
-        setClick((click)=>click-(upgCalc(50000,upg6)))
+        setValue((value)=>value+ValueData.additionals[5])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[5],upg6)))
       }
       break;
       case 'upgrade7': 
-      if(click >= upgCalc(150000,upg7)){
+      if(click >= upgCalc(ValueData.baseVals[6],upg7)){
         setUpg7((upg7)=>upg7+1)
-        setValue((value)=>value+450)
-        setClick((click)=>click-(upgCalc(150000,upg7)))
+        setValue((value)=>value+ValueData.additionals[6])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[6],upg7)))
       }
       break;
       case 'upgrade8': 
-      if(click >= upgCalc(300000,upg8)){
+      if(click >= upgCalc(ValueData.baseVals[7],upg8)){
         setUpg8((upg8)=>upg8+1)
-        setValue((value)=>value+1000)
-        setClick((click)=>click-(upgCalc(300000,upg8)))
+        setValue((value)=>value+ValueData.additionals[7])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[7],upg8)))
       }
       break;
       case 'upgrade9': 
-      if(click >= upgCalc(1000000,upg9)){
+      if(click >= upgCalc(ValueData.baseVals[8],upg9)){
         setUpg9((upg9)=>upg9+1)
-        setValue((value)=>value+5000)
-        setClick((click)=>click-(upgCalc(1000000,upg9)))
+        setValue((value)=>value+ValueData.additionals[8])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[8],upg9)))
       }
       break;
       case 'upgrade10': 
-      if(click >= upgCalc(3500000,upg10)){
+      if(click >= upgCalc(ValueData.baseVals[9],upg10)){
         setUpg10((upg10)=>upg10+1)
-        setValue((value)=>value+15000)
-        setClick((click)=>click-(upgCalc(3500000,upg10)))
+        setValue((value)=>value+ValueData.additionals[9])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[9],upg10)))
       }
       break;
       case 'upgrade11': 
-      if(click >= upgCalc(25000000,upg11)){
+      if(click >= upgCalc(ValueData.baseVals[10],upg11)){
         setUpg11((upg11)=>upg11+1)
-        setValue((value)=>value+50000)
-        setClick((click)=>click-(upgCalc(25000000,upg11)))
+        setValue((value)=>value+ValueData.additionals[10])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[10],upg11)))
       }
       break;
       case 'upgrade12': 
-      if(click >= upgCalc(200000000,upg12)){
+      if(click >= upgCalc(ValueData.baseVals[11],upg12)){
         setUpg12((upg12)=>upg12+1)
-        setValue((value)=>value+300000)
-        setClick((click)=>click-(upgCalc(200000000,upg12)))
+        setValue((value)=>value+ValueData.additionals[11])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[11],upg12)))
       }
       break;
       case 'upgrade13': 
-      if(click >= upgCalc(1000000000,upg13)){
+      if(click >= upgCalc(ValueData.baseVals[12],upg13)){
         setUpg13((upg13)=>upg13+1)
-        setValue((value)=>value+650000)
-        setClick((click)=>click-(upgCalc(1000000000,upg13)))
+        setValue((value)=>value+ValueData.additionals[12])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[12],upg13)))
       }
       break;
       case 'upgrade14': 
-      if(click >= upgCalc(10000000000,upg14)){
+      if(click >= upgCalc(ValueData.baseVals[13],upg14)){
         setUpg14((upg14)=>upg14+1)
-        setValue((value)=>value+2500000)
-        setClick((click)=>click-(upgCalc(10000000000,upg14)))
+        setValue((value)=>value+ValueData.additionals[13])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[13],upg14)))
       }
       break;
       case 'upgrade15': 
-      if(click >= upgCalc(50000000000,upg15)){
+      if(click >= upgCalc(ValueData.baseVals[14],upg15)){
         setUpg15((upg15)=>upg15+1)
-        setValue((value)=>value+10000000)
-        setClick((click)=>click-(upgCalc(50000000000,upg15)))
+        setValue((value)=>value+ValueData.additionals[14])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[14],upg15)))
       }
       break;
       case 'upgrade16': 
-      if(click >= upgCalc(350000000000,upg16)){
+      if(click >= upgCalc(ValueData.baseVals[15],upg16)){
         setUpg16((upg16)=>upg16+1)
-        setValue((value)=>value+35000000)
-        setClick((click)=>click-(upgCalc(350000000000,upg16)))
+        setValue((value)=>value+ValueData.additionals[15])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[15],upg16)))
       }
       break;
       case 'upgrade17': 
-      if(click >= upgCalc(1000000000000,upg17)){
+      if(click >= upgCalc(ValueData.baseVals[16],upg17)){
         setUpg17((upg17)=>upg17+1)
-        setValue((value)=>value+65000000)
-        setClick((click)=>click-(upgCalc(1000000000000,upg17)))
+        setValue((value)=>value+ValueData.additionals[16])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[16],upg17)))
       }
       break;
       case 'upgrade18': 
-      if(click >= upgCalc(50000000000000,upg18)){
+      if(click >= upgCalc(ValueData.baseVals[17],upg18)){
         setUpg18((upg18)=>upg18+1)
-        setValue((value)=>value+100000000)
-        setClick((click)=>click-(upgCalc(50000000000000,upg18)))
+        setValue((value)=>value+ValueData.additionals[17])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[17],upg18)))
       }
       break;
       case 'upgrade19': 
-      if(click >= upgCalc(350000000000000,upg19)){
+      if(click >= upgCalc(ValueData.baseVals[18],upg19)){
         setUpg19((upg19)=>upg19+1)
-        setValue((value)=>value+350000000)
-        setClick((click)=>click-(upgCalc(350000000000000,upg19)))
+        setValue((value)=>value+ValueData.additionals[18])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[18],upg19)))
       }
       break;
       case 'upgrade20': 
-      if(click >= upgCalc(1000000000000000,upg20)){
+      if(click >= upgCalc(ValueData.baseVals[19],upg20)){
         setUpg20((upg20)=>upg20+1)
-        setValue((value)=>value+650000000)
-        setClick((click)=>click-(upgCalc(1000000000000000,upg20)))
+        setValue((value)=>value+ValueData.additionals[19])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[19],upg20)))
       }
       break;
       case 'upgrade21': 
-      if(click >= upgCalc(25000000000000000,upg21)){
+      if(click >= upgCalc(ValueData.baseVals[20],upg21)){
         setUpg21((upg21)=>upg21+1)
-        setValue((value)=>value+1000000000)
-        setClick((click)=>click-(upgCalc(25000000000000000,upg21)))
+        setValue((value)=>value+ValueData.additionals[20])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[20],upg21)))
       }
       break;
       case 'upgrade22': 
-      if(click >= upgCalc(350000000000000000,upg22)){
+      if(click >= upgCalc(ValueData.baseVals[21],upg22)){
         setUpg22((upg22)=>upg22+1)
-        setValue((value)=>value+5000000000)
-        setClick((click)=>click-(upgCalc(350000000000000000,upg22)))
+        setValue((value)=>value+ValueData.additionals[21])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[21],upg22)))
       }
       break;
       case 'upgrade23': 
-      if(click >= upgCalc(1000000000000000000,upg23)){
+      if(click >= upgCalc(ValueData.baseVals[22],upg23)){
         setUpg23((upg23)=>upg23+1)
-        setValue((value)=>value+10000000000)
-        setClick((click)=>click-(upgCalc(1000000000000000000,upg23)))
+        setValue((value)=>value+ValueData.additionals[22])
+        setClick((click)=>click-(upgCalc(ValueData.baseVals[22],upg23)))
       }
       break;
     }
@@ -256,7 +262,7 @@ const amountDisplay = (upgrade, amount)=>{
         return (`ammount: ${abbreviateNumber(upg1,stats)}`)
       }else{
         
-        return (`population: +${abbreviateNumber(upg1,stats)}`)
+        return (`population: +${abbreviateNumber(upg1*ValueData.additionals[0],stats)}`)
       }
       
     break;
@@ -266,154 +272,154 @@ const amountDisplay = (upgrade, amount)=>{
         return (`ammount: ${abbreviateNumber(upg2,stats)}`)
       }else{
        
-        return (`population: +${abbreviateNumber(upg2*3,stats)}`)
+        return (`population: +${abbreviateNumber(upg2*ValueData.additionals[1],stats)}`)
       }
     break;
     case 3:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg3,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg3*5,stats)}`)
+        return (`population: +${abbreviateNumber(upg3*ValueData.additionals[2],stats)}`)
       }
     break;
     case 4:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg4,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg4*10,stats)}`)
+        return (`population: +${abbreviateNumber(upg4*ValueData.additionals[3],stats)}`)
       }
     break;
     case 5:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg5,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg5*25,stats)}`)
+        return (`population: +${abbreviateNumber(upg5*ValueData.additionals[4],stats)}`)
       }
     break;
     case 6:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg6,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg6*100,stats)}`)
+        return (`population: +${abbreviateNumber(upg6*ValueData.additionals[5],stats)}`)
       }
     break;
     case 7:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg7,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg7*450,stats)}`)
+        return (`population: +${abbreviateNumber(upg7*ValueData.additionals[6],stats)}`)
       }
     break;
     case 8:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg8,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg8*1000,stats)}`)
+        return (`population: +${abbreviateNumber(upg8*ValueData.additionals[7],stats)}`)
       }
     break;
     case 9:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg9,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg9*5000,stats)}`)
+        return (`population: +${abbreviateNumber(upg9*ValueData.additionals[8],stats)}`)
       }
     break;
     case 10:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg10,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg10*15000,stats)}`)
+        return (`population: +${abbreviateNumber(upg10*ValueData.additionals[9],stats)}`)
       }
     break;
     case 11:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg11,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg11*50000,stats)}`)
+        return (`population: +${abbreviateNumber(upg11*ValueData.additionals[10],stats)}`)
       }
     break;
     case 12:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg12,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg12*300000,stats)}`)
+        return (`population: +${abbreviateNumber(upg12*ValueData.additionals[11],stats)}`)
       }
     break;
     case 13:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg13,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg13*560000,stats)}`)
+        return (`population: +${abbreviateNumber(upg13*ValueData.additionals[12],stats)}`)
       }
     break;
     case 14:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg14,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg14*2500000,stats)}`)
+        return (`population: +${abbreviateNumber(upg14*ValueData.additionals[13],stats)}`)
       }
     break;
     case 15:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg15,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg15*10000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg15*ValueData.additionals[14],stats)}`)
       }
     break;
     case 16:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg16,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg16*35000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg16*ValueData.additionals[15],stats)}`)
       }
     break;
     case 17:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg17,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg17*65000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg17*ValueData.additionals[16],stats)}`)
       }
     break;
     case 18:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg18,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg18*100000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg18*ValueData.additionals[17],stats)}`)
       }
     break;
     case 19:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg19,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg19*350000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg19*ValueData.additionals[18],stats)}`)
       }
     break;
     case 20:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg20,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg20*650000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg20*ValueData.additionals[19],stats)}`)
       }
     break;
     case 21:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg21,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg21*1000000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg21*ValueData.additionals[20],stats)}`)
       }
     break;
     case 22:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg22,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg22*5000000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg22*ValueData.additionals[21],stats)}`)
       }
     break;
     case 23:
       if(amount === true){
         return (`ammount: ${abbreviateNumber(upg23,stats)}`)
       }else{
-        return (`population: +${abbreviateNumber(upg23*10000000000,stats)}`)
+        return (`population: +${abbreviateNumber(upg23*ValueData.additionals[22],stats)}`)
       }
     break;
 
@@ -431,7 +437,7 @@ const amountDisplay = (upgrade, amount)=>{
       setClick((click)=>click+value)
     }, 1000);
     
-    document.title = (`Pop: ${abbreviateNumber(click,stats )}`)
+    document.title = (`Population Pop`)
     return () => clearInterval(interval);
     
   },[value]);
@@ -440,7 +446,7 @@ const amountDisplay = (upgrade, amount)=>{
     <div className="main">
       
       <div className="countDisplay">
-        <h1>Population: { abbreviateNumber(click,stats)}</h1>
+        <h1 >Population: { abbreviateNumber(click,stats)}</h1>
         <h6>cps: { abbreviateNumber(value,stats)}</h6>
 
         <div >
@@ -454,30 +460,30 @@ const amountDisplay = (upgrade, amount)=>{
       </div>
        
       <div className="upgradesMenu">
-        <h5>Upgrade Menu:</h5>
-        <button className="upgrade" value='upgrade1' onClick={upgradeManager} >🏠 Houses: ${abbreviateNumber(upgCalc(20,upg1),stats)}{spaces}{amountDisplay(1,price)}</button>
-        <button className="upgrade" value='upgrade2' onClick={upgradeManager} >🚲 Bike Lanes: ${abbreviateNumber(upgCalc(250,upg2),stats)}{spaces}{amountDisplay(2,price)}</button>
-        <button className="upgrade" value='upgrade3' onClick={upgradeManager} >🚌 Bus Netowrk: ${abbreviateNumber(upgCalc(1000,upg3),stats)}{spaces}{amountDisplay(3,price)}</button>
-        <button className="upgrade" value='upgrade4' onClick={upgradeManager} >🚊 Trams: ${abbreviateNumber(upgCalc(5000,upg4),stats)}{spaces}{amountDisplay(4,price)}</button>
-        <button className="upgrade" value='upgrade5' onClick={upgradeManager} >🏫 Schools: ${abbreviateNumber(upgCalc(15000,upg5),stats)}{spaces}{amountDisplay(5,price)}</button>
-        <button className="upgrade" value='upgrade6' onClick={upgradeManager} >🚕 Taxis: ${abbreviateNumber(upgCalc(50000,upg6),stats)}{spaces}{amountDisplay(6,price)}</button>
-        <button className="upgrade" value='upgrade7' onClick={upgradeManager} >🛻 MotorWay: ${abbreviateNumber(upgCalc(150000,upg7),stats)}{spaces}{amountDisplay(7,price)}</button>
-        <button className="upgrade" value='upgrade8' onClick={upgradeManager} >⛪ House of worship: ${abbreviateNumber(upgCalc(300000,upg8),stats)}{spaces}{amountDisplay(8,price)}</button>
-        <button className="upgrade" value='upgrade9' onClick={upgradeManager} >🏢 Offices: ${abbreviateNumber(upgCalc(1000000,upg9),stats)}{spaces}{amountDisplay(9,price)}</button>
-        <button className="upgrade" value='upgrade10' onClick={upgradeManager} >🚑 Emergency Response: ${abbreviateNumber(upgCalc(3500000,upg10),stats)}{spaces}{amountDisplay(10,price)}</button>
-        <button className="upgrade" value='upgrade11' onClick={upgradeManager} >🚈 Rail Network: ${abbreviateNumber(upgCalc(25000000,upg11),stats)}{spaces}{amountDisplay(11,price)}</button>
-        <button className="upgrade" value='upgrade12' onClick={upgradeManager} >🚢 Harbor: ${abbreviateNumber(upgCalc(200000000,upg12),stats)}{spaces}{amountDisplay(12,price)}</button>
-        <button className="upgrade" value='upgrade13' onClick={upgradeManager} >🗽 Tourist attraction: ${abbreviateNumber(upgCalc(1000000000,upg13),stats)}{spaces}{amountDisplay(13,price)}</button>
-        <button className="upgrade" value='upgrade14' onClick={upgradeManager} >🏨 Hotels: ${abbreviateNumber(upgCalc(10000000000,upg14),stats)}{spaces}{amountDisplay(14,price)}</button>
-        <button className="upgrade" value='upgrade15' onClick={upgradeManager} >🧬 Scientific Research: ${abbreviateNumber(upgCalc(50000000000,upg15),stats)}{spaces}{amountDisplay(15,price)}</button>
-        <button className="upgrade" value='upgrade16' onClick={upgradeManager} >🔭 Space Research: ${abbreviateNumber(upgCalc(350000000000,upg16),stats)}{spaces}{amountDisplay(16,price)}</button>
-        <button className="upgrade" value='upgrade17' onClick={upgradeManager} >🤖 Artificial Inteligence: ${abbreviateNumber(upgCalc(1000000000000,upg17),stats)}{spaces}{amountDisplay(17,price)}</button>
-        <button className="upgrade" value='upgrade18' onClick={upgradeManager} >🚀 Lunar Presence: ${abbreviateNumber(upgCalc(50000000000000,upg18),stats)}{spaces}{amountDisplay(18,price)}</button>
-        <button className="upgrade" value='upgrade19' onClick={upgradeManager} >☀️ Local System Presence: ${abbreviateNumber(upgCalc(350000000000000,upg19),stats)}{spaces}{amountDisplay(19,price)}</button>
-        <button className="upgrade" value='upgrade20' onClick={upgradeManager} >🦾 Singularity Event: ${abbreviateNumber(upgCalc(1000000000000000,upg20),stats)}{spaces}{amountDisplay(20,price)}</button>
-        <button className="upgrade" value='upgrade21' onClick={upgradeManager} >🏛️ Philosophy: ${abbreviateNumber(upgCalc(25000000000000000,upg21),stats)}{spaces}{amountDisplay(21,price)}</button>
-        <button className="upgrade" value='upgrade22' onClick={upgradeManager} >👽 Alien Contact: ${abbreviateNumber(upgCalc(350000000000000000,upg22),stats)}{spaces}{amountDisplay(22,price)}</button>
-        <button className="upgrade" value='upgrade23' onClick={upgradeManager} >🌌 Galactic Presence: ${abbreviateNumber(upgCalc(1000000000000000000,upg23),stats)}{spaces}{amountDisplay(23,price)}</button>
+        <h5 className='UpgradeBanner'>Upgrade Menu:</h5>
+        <button className="upgrade" value='upgrade1' onClick={upgradeManager} ><span className='icon'>🏠</span><span className='upgradeName'> Houses: ${abbreviateNumber(upgCalc(ValueData.baseVals[0],upg1),stats)}</span><span className='upgradeAmount'>{amountDisplay(1,price)}</span></button>
+        <button className="upgrade" value='upgrade2' onClick={upgradeManager} ><span className='icon'>🚲</span><span className='upgradeName'> Bike Lanes: ${abbreviateNumber(upgCalc(ValueData.baseVals[1],upg2),stats)}</span><span className='upgradeAmount'>{amountDisplay(2,price)}</span></button>
+        <button className="upgrade" value='upgrade3' onClick={upgradeManager} ><span className='icon'>🚌</span><span className='upgradeName'> Bus Netowrk: ${abbreviateNumber(upgCalc(ValueData.baseVals[2],upg3),stats)}</span><span className='upgradeAmount'>{amountDisplay(3,price)}</span></button>
+        <button className="upgrade" value='upgrade4' onClick={upgradeManager} ><span className='icon'>🚊</span><span className='upgradeName'> Trams: ${abbreviateNumber(upgCalc(ValueData.baseVals[3],upg4),stats)}</span><span className='upgradeAmount'>{amountDisplay(4,price)}</span></button>
+        <button className="upgrade" value='upgrade5' onClick={upgradeManager} ><span className='icon'>🏫</span><span className='upgradeName'> Schools: ${abbreviateNumber(upgCalc(ValueData.baseVals[4],upg5),stats)}</span><span className='upgradeAmount'>{amountDisplay(5,price)}</span></button>
+        <button className="upgrade" value='upgrade6' onClick={upgradeManager} ><span className='icon'>🚕</span><span className='upgradeName'> Taxis: ${abbreviateNumber(upgCalc(ValueData.baseVals[5],upg6),stats)}</span><span className='upgradeAmount'>{amountDisplay(6,price)}</span></button>
+        <button className="upgrade" value='upgrade7' onClick={upgradeManager} ><span className='icon'>🛻</span><span className='upgradeName'> MotorWay: ${abbreviateNumber(upgCalc(ValueData.baseVals[6],upg7),stats)}</span><span className='upgradeAmount'>{amountDisplay(7,price)}</span></button>
+        <button className="upgrade" value='upgrade8' onClick={upgradeManager} ><span className='icon'>⛪</span><span className='upgradeName'> House of worship: ${abbreviateNumber(upgCalc(ValueData.baseVals[7],upg8),stats)}</span><span className='upgradeAmount'>{amountDisplay(8,price)}</span></button>
+        <button className="upgrade" value='upgrade9' onClick={upgradeManager} ><span className='icon'>🏢</span><span className='upgradeName'> Offices: ${abbreviateNumber(upgCalc(ValueData.baseVals[8],upg9),stats)}</span><span className='upgradeAmount'>{amountDisplay(9,price)}</span></button>
+        <button className="upgrade" value='upgrade10' onClick={upgradeManager} ><span className='icon'>🚑</span><span className='upgradeName'> Emergency Response: ${abbreviateNumber(upgCalc(ValueData.baseVals[9],upg10),stats)}</span><span className='upgradeAmount'>{amountDisplay(10,price)}</span></button>
+        <button className="upgrade" value='upgrade11' onClick={upgradeManager} ><span className='icon'>🚈</span><span className='upgradeName'> Rail Network: ${abbreviateNumber(upgCalc(ValueData.baseVals[10],upg11),stats)}</span><span className='upgradeAmount'>{amountDisplay(11,price)}</span></button>
+        <button className="upgrade" value='upgrade12' onClick={upgradeManager} ><span className='icon'>🚢</span><span className='upgradeName'> Harbor: ${abbreviateNumber(upgCalc(ValueData.baseVals[11],upg12),stats)}</span><span className='upgradeAmount'>{amountDisplay(12,price)}</span></button>
+        <button className="upgrade" value='upgrade13' onClick={upgradeManager} ><span className='icon'>🗽</span><span className='upgradeName'> Tourist attraction: ${abbreviateNumber(upgCalc(ValueData.baseVals[12],upg13),stats)}</span><span className='upgradeAmount'>{amountDisplay(13,price)}</span></button>
+        <button className="upgrade" value='upgrade14' onClick={upgradeManager} ><span className='icon'>🏨</span><span className='upgradeName'> Hotels: ${abbreviateNumber(upgCalc(ValueData.baseVals[13],upg14),stats)}</span><span className='upgradeAmount'>{amountDisplay(14,price)}</span></button>
+        <button className="upgrade" value='upgrade15' onClick={upgradeManager} ><span className='icon'>🧬</span><span className='upgradeName'> Scientific Research: ${abbreviateNumber(upgCalc(ValueData.baseVals[14],upg15),stats)}</span><span className='upgradeAmount'>{amountDisplay(15,price)}</span></button>
+        <button className="upgrade" value='upgrade16' onClick={upgradeManager} ><span className='icon'>🔭</span><span className='upgradeName'> Space Research: ${abbreviateNumber(upgCalc(ValueData.baseVals[15],upg16),stats)}</span><span className='upgradeAmount'>{amountDisplay(16,price)}</span></button>
+        <button className="upgrade" value='upgrade17' onClick={upgradeManager} ><span className='icon'>🤖</span><span className='upgradeName'> Artificial Inteligence: ${abbreviateNumber(upgCalc(ValueData.baseVals[16],upg17),stats)}</span><span className='upgradeAmount'>{amountDisplay(17,price)}</span></button>
+        <button className="upgrade" value='upgrade18' onClick={upgradeManager} ><span className='icon'>🚀</span><span className='upgradeName'> Lunar Presence: ${abbreviateNumber(upgCalc(ValueData.baseVals[17],upg18),stats)}</span><span className='upgradeAmount'>{amountDisplay(18,price)}</span></button>
+        <button className="upgrade" value='upgrade19' onClick={upgradeManager} ><span className='icon'>☀️</span><span className='upgradeName'> Local System Presence: ${abbreviateNumber(upgCalc(ValueData.baseVals[18],upg19),stats)}</span><span className='upgradeAmount'>{amountDisplay(19,price)}</span></button>
+        <button className="upgrade" value='upgrade20' onClick={upgradeManager} ><span className='icon'>🦾</span><span className='upgradeName'> Singularity Event: ${abbreviateNumber(upgCalc(ValueData.baseVals[19],upg20),stats)}</span><span className='upgradeAmount'>{amountDisplay(20,price)}</span></button>
+        <button className="upgrade" value='upgrade21' onClick={upgradeManager} ><span className='icon'>🏛️</span><span className='upgradeName'> Philosophy: ${abbreviateNumber(upgCalc(ValueData.baseVals[20],upg21),stats)}</span><span className='upgradeAmount'>{amountDisplay(21,price)}</span></button>
+        <button className="upgrade" value='upgrade22' onClick={upgradeManager} ><span className='icon'>👽</span><span className='upgradeName'> Alien Contact: ${abbreviateNumber(upgCalc(ValueData.baseVals[21],upg22),stats)}</span><span className='upgradeAmount'>{amountDisplay(22,price)}</span></button>
+        <button className="upgrade" value='upgrade23' onClick={upgradeManager} ><span className='icon'>🌌</span><span className='upgradeName'> Galactic Presence: ${abbreviateNumber(upgCalc(ValueData.baseVals[22],upg23),stats)}</span><span className='upgradeAmount'>{amountDisplay(23,price)}</span></button>
       </div>
     </div>
   );
