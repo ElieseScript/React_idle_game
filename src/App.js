@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 function App() {
-  const [click, setClick] = useState(10000000000)
+  const [click, setClick] = useState(0)
   const [value, setValue] = useState(0)
   const [upg1, setUpg1] = useState(0)
   const [upg2, setUpg2] = useState(0)
@@ -434,14 +434,14 @@ const amountDisplay = (upgrade, amount)=>{
     document.title = (`Pop: ${abbreviateNumber(click,stats )}`)
     return () => clearInterval(interval);
     
-  },[click,value]);
+  },[value]);
 
   return (
     <div className="main">
       
       <div className="countDisplay">
         <h1>Population: { abbreviateNumber(click,stats)}</h1>
-        <h6>cps: { abbreviateNumber(value)}</h6>
+        <h6>cps: { abbreviateNumber(value,stats)}</h6>
 
         <div >
           <button className="mainButton" onClick={handleClick}>click</button>
