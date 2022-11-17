@@ -14,6 +14,11 @@ body{
 	justify-content: center;
 	align-items: center;
   	font-size: xx-large;
+	  user-select: none; /* supported by Chrome and Opera */
+	  -webkit-user-select: none; /* Safari */
+	  -khtml-user-select: none; /* Konqueror HTML */
+	  -moz-user-select: none; /* Firefox */
+	  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 div .main{
   display: inline-flex;
@@ -57,6 +62,8 @@ div #statTogButton{
 	border-radius: 0.35em;
 	padding: 0.2em;
 	margin-right: 1em;
+	margin-left: 0.3em;
+	margin-top: 0.4em;
 	filter: drop-shadow(0 0 0.15rem black);
 }
 .upgradesMenu{
@@ -72,16 +79,8 @@ div #statTogButton{
 	
 	
 }
-div .upgrade{
-  font-family:'Anonymous Pro',monospace;
-  font-size: large;
-  font-weight: 600;
-  width: 100%;
-  height: 5em;
-  border: solid rgba(34, 27, 43, 0.75) 0.15em;
-}
 .upgradeName{
-	margin-top: 1em;
+	margin-top: 1.8em;
 	float: left;
 	
 }
@@ -90,7 +89,7 @@ div .upgrade{
 	font-size: medium !important;
 	margin-right: 1em;
 }
-ul{
+.pointers{
 	float: left;
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -98,14 +97,35 @@ ul{
 	border-bottom: solid white 0.1em;
 	width: 100%;
 	margin: 0;
+	list-style-type: none;
 	
 	
 }
-li{
+.pointers li {
 	margin: 0.1em;
 	width: 2em;
 	height: 2em;
 	border: solid white 0.1em;
-	list-style: none;
 
 }
+.upgraders{
+	list-style-type: none;
+	padding: 0;
+}
+.upgraders li {
+	background-color: rgb(199, 199, 199);
+	color: black;
+	width: 100%;
+	height: 5em;
+	border-bottom: solid rgba(34, 27, 43, 0.75) 0.2em;
+	float: left;
+	font-family:'Anonymous Pro',monospace;
+  	font-size: large;
+  	font-weight: 600;
+}
+.upgradesMenu::-webkit-scrollbar {
+	display: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
+  
