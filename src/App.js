@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 function App() {
-  const [click, setClick] = useState(999)
+  const [click, setClick] = useState(0)
   const [value, setValue] = useState(0)
   const [stats, setStats] = useState(false)
   const [price, setPrice] = useState(false)
