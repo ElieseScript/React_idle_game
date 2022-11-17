@@ -4,17 +4,16 @@ body{
 	color: rgba(255,255,255, 0.75);
 	font-family:'Anonymous Pro',monospace;
 	background-color:rgb(25,25,25);
-	background-image: url('./images/topogBlur.png');
+	background-image: url('./images/dark_embroidery.png');
 	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
+	background-repeat: repeat;
 	filter: drop-shadow(0 0 0.20rem white);
 	overflow: hidden;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  font-size: xx-large;
+  	font-size: xx-large;
 }
 div .main{
   display: inline-flex;
@@ -35,6 +34,7 @@ div .countDisplay{
   margin-bottom: 5%;
   
 }
+
 div #statTog{
   display: inline-flex;
   width: 10em;
@@ -67,7 +67,9 @@ div #statTogButton{
 	width: 100%;
 	height: 70vh;
 	background-color:rgb(20,15,25);
-  overflow-y: auto;
+  	overflow-y: auto;
+	overflow-x: hidden;
+	
 	
 }
 div .upgrade{
@@ -87,4 +89,23 @@ div .upgrade{
 	float: right;
 	font-size: medium !important;
 	margin-right: 1em;
+}
+ul{
+	float: left;
+	display: inline-flex;
+	flex-wrap: wrap;
+	border-top: solid white 0.1em;
+	border-bottom: solid white 0.1em;
+	width: 100%;
+	margin: 0;
+	
+	
+}
+li{
+	margin: 0.1em;
+	width: 2em;
+	height: 2em;
+	border: solid white 0.1em;
+	list-style: none;
+
 }

@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 function App() {
-  const [click, setClick] = useState(0)
+  const [click, setClick] = useState(999)
   const [value, setValue] = useState(0)
   const [upg1, setUpg1] = useState(0)
   const [upg2, setUpg2] = useState(0)
@@ -30,15 +30,35 @@ function App() {
   const [upg23, setUpg23] = useState(0)
   const [stats, setStats] = useState(false)
   const [price, setPrice] = useState(false)
-  const spaces =  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  const handleClick = () => setClick(click+1)
+  const [mainClick, setMainClick]=useState(1)
+  const [pointers, setPointers] = useState([
+    { id: 1, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_1.png', price: 1000},
+    { id: 2, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_2.png', price: 15000},
+    { id: 3, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_3.png', price: 50000},
+    { id: 4, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_4.png', price: 150000},
+    { id: 5, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_5.png', price: 400000},
+    { id: 6, name: 'x2 click for:', imageUrl:'./images/Pointers/Pointer_6.png', price: 800000},
+  ]);
+  
+  const handleClick = () => setClick(click+mainClick)
+
+  const upgradeMain = (id,price) =>{
+    if(click >= price){
+      const newPointer = pointers.filter(
+        (pointers) => pointers.id !== id
+      );
+      setPointers(newPointer);
+      setClick((click)-price)
+      setMainClick((mainClick)=>mainClick*2)
+    }
+  }
+
   const numSimp = (number) =>{
     return number.toLocaleString()
 }
   const ValueData = {
     baseVals: [20,250,1000,5000,15000,50000,150000,300000,1000000,3500000,25000000,200000000,1000000000,10000000000,50000000000,350000000000,1000000000000,50000000000000,350000000000000,1000000000000000,25000000000000000,350000000000000000,1000000000000000000],
     additionals:[1,3,5,10,25,100,450,1000,5000,15000,50000,300000,650000,2500000,10000000,35000000,65000000,100000000,350000000,650000000,1000000000,5000000000,10000000000]
-
   }
   
 const abbreviateNumber=(value, bool)=> {
@@ -461,6 +481,17 @@ const amountDisplay = (upgrade, amount)=>{
        
       <div className="upgradesMenu">
         <h5 className='UpgradeBanner'>Upgrade Menu:</h5>
+        <ul >
+        {pointers.map((pointers) => (
+        
+          <li key={pointers.id}
+            onClick={() => upgradeMain(pointers.id,pointers.price)}
+          >
+            <img src={require(`${pointers.imageUrl}`)} title={`${pointers.name} ${abbreviateNumber(pointers.price,stats)}`}/>
+          </li>
+        
+        ))}
+        </ul>
         <button className="upgrade" value='upgrade1' onClick={upgradeManager} ><span className='icon'>🏠</span><span className='upgradeName'> Houses: ${abbreviateNumber(upgCalc(ValueData.baseVals[0],upg1),stats)}</span><span className='upgradeAmount'>{amountDisplay(1,price)}</span></button>
         <button className="upgrade" value='upgrade2' onClick={upgradeManager} ><span className='icon'>🚲</span><span className='upgradeName'> Bike Lanes: ${abbreviateNumber(upgCalc(ValueData.baseVals[1],upg2),stats)}</span><span className='upgradeAmount'>{amountDisplay(2,price)}</span></button>
         <button className="upgrade" value='upgrade3' onClick={upgradeManager} ><span className='icon'>🚌</span><span className='upgradeName'> Bus Netowrk: ${abbreviateNumber(upgCalc(ValueData.baseVals[2],upg3),stats)}</span><span className='upgradeAmount'>{amountDisplay(3,price)}</span></button>
